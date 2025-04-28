@@ -1,23 +1,23 @@
+import random
 print('Jogo da Adivinhação')
 Tentativa = None
 Modo = None
 Nivel = None
-num1 = 7
-num2 = 82
-num3 = 453
+
 
 #laço para escolha do modo
+
 while True:
     print('Se deseja jogar a versão Maior/Menor digite "M" \nSe deseja jogar a versão Diferença digite "D"')
     Modo = input()
     if ((Modo == 'M') or (Modo == 'm')):
-    
-    #Laço para escolha do nível (Modo Maior/Menor)
+        #Laço para escolha do nível (Modo Maior/Menor)
     
         while True:
-            print('Digite qual nível deseja jogar:\n \"nivel1 (números de 1 a 10)\" \n \"nivel2 (números de 1 a 100)\" \n \"nivel3 (números de 1 a 1000)\" \n menu anterior = \"x\"')
+            print('Digite 1 para Nível 1 (números de 1 a 10) \nDigite 2 para Nível 2 (números de 1 a 100) \nDigite 3 para Nível 3 (números de 1 a 1000) \nDigite X para Menu Anterior')
             Nivel = input()
-            if (Nivel == 'nivel1'):
+            if (Nivel == '1'):
+                num1 = random.randint(1,10)                
                 while True:
                     print('Qual você acha que é o número? ')
                     Tentativa = int(input())
@@ -28,7 +28,8 @@ while True:
                     else:
                         break
                 print('Você acertou o número')
-            elif (Nivel == 'nivel2'):
+            elif (Nivel == '2'):
+                num2 = random.randint(1,100)
                 while True:
                     print('Qual você acha que é o número? ')
                     Tentativa = int(input())
@@ -39,7 +40,8 @@ while True:
                     else:
                         break
                 print('Você acertou o número')
-            elif (Nivel == 'nivel3'):
+            elif (Nivel == '3'):                
+                num3 = random.randint(1,1000)
                 while True:
                     print('Qual você acha que é o número? ')
                     Tentativa = int(input())
@@ -54,14 +56,13 @@ while True:
             else:
                 break
             
-    elif ((Modo == 'D') or (Modo == 'd')):
-        
-        #laço para escolha do nível (Modo Diferença)
-        
+    elif ((Modo == 'D') or (Modo == 'd')):        
+        #laço para escolha do nível (Modo Diferença)        
         while True:
-            print('Digite qual nível deseja jogar:\n \"nivel1 (números de 1 a 10)\" \n \"nivel2 (números de 1 a 100)\" \n \"nivel3 (números de 1 a 1000)\" \n menu anterior = \"x\"')
+            print('Digite 1 para Nível 1 (números de 1 a 10) \nDigite 2 para Nível 2 (números de 1 a 100) \nDigite 3 para Nível 3 (números de 1 a 1000) \nDigite X para Menu Anterior')
             Nivel = input()
-            if (Nivel == 'nivel1'):
+            if (Nivel == '1'):
+                num1 = random.randint(1,10)                
                 while True:
                     print('Qual você acha que é o número? ')
                     Tentativa = int(input())
@@ -71,7 +72,8 @@ while True:
                     else:
                         break
                 print(f'Você acertou, o número correto é {Tentativa}')
-            elif (Nivel == 'nivel2'):
+            elif (Nivel == '2'):                
+                num2 = random.randint(1,100)                
                 while True:
                     print('Qual você acha que é o número? ')
                     Tentativa = int(input())
@@ -81,7 +83,8 @@ while True:
                     else:
                         break
                 print(f'Você acertou, o número correto é {Tentativa}')
-            elif (Nivel == 'nivel3'):
+            elif (Nivel == '3'):                
+                num3 = random.randint(1,1000)
                 while True:
                     print('Qual você acha que é o número? ')
                     Tentativa = int(input())
